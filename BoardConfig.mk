@@ -24,7 +24,7 @@ TARGET_2ND_CPU_VARIANT := generic
 # ====================== Kernel Configuration (Device-Verified) ======================
 # Prebuilt kernel path (commented by default to fix "kernel not found" error)
 # Uncomment only if prebuilt/kernel file exists in device tree directory
-# TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/prebuilt/kernel
+TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/prebuilt/kernel
 
 # Full kernel cmdline (from cat /proc/cmdline)
 BOARD_KERNEL_CMDLINE := rcupdate.rcu_expedited=1 rcu_nocbs=0-7 kpti=off console=ttyMSM0,115200n8 earlycon=msm_geni_serial,0x4a90000 androidboot.hardware=qcom androidboot.console=ttyMSM0 androidboot.memcg=1 lpm_levels.sleep_disabled=1 video=vfb:640x400,bpp=32,memsize=3072000 msm_rtb.filter=0x237 service_locator.enable=1 swiotlb=2048 loop.max_part=7 buildvariant=user lk_version=V1.0 androidboot.startupmode=hard_reset androidboot.mode=reboot printk.disable_uart=1 phx_rus_conf.main_on=1 phx_rus_conf.recovery_method=2 phx_rus_conf.kernel_time=240 phx_rus_conf.android_time=250 smooth_soc_switch=0 simcardnum.doublesim=1 saupwk.en=1 androidboot.prjname=20021 esim.status=0 androidboot.verifiedbootstate=orange androidboot.keymaster=1 androidboot.vbmeta.device=PARTUUID=d32662b2-b302-252a-1a74-a1fa442a1b97 androidboot.vbmeta.avb_version=1.0 androidboot.vbmeta.device_state=unlocked androidboot.vbmeta.hash_alg=sha256 androidboot.vbmeta.size=18048 androidboot.vbmeta.digest=e3491b02450ad1af3c5d768356abb077b85d143163a6e2935b7ecaa8b71354ee androidboot.vbmeta.invalidate_on_error=yes androidboot.veritymode=enforcing androidboot.bootdevice=4804000.ufshc androidboot.fstab_suffix=default androidboot.boot_devices=soc/4804000.ufshc androidboot.serialno=eadd25a9 androidboot.baseband=msm msm_drm.dsi_display0=qcom,mdss_dsi_ili9882n_90hz_inx_video: androidboot.dtbo_idx=7 androidboot.dtb_idx=4
@@ -92,3 +92,4 @@ BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := f2fs  # mount | grep /data = f2fs
 BOARD_SYSTEMIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 TARGET_COPY_OUT_VENDOR := vendor
+BUILD_FINGERPRINT := OPPO/PDVM00/OP4E35:11/RKQ1.201217.002/1716954220938:user/release-keys
