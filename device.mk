@@ -3,7 +3,7 @@
 LOCAL_PATH := device/OPPO/OP4E35
 
 # Inherit OmniROM core config (synced via existing GitHub Actions workflow)
-$(call inherit-product, vendor/omni/config/common.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/base.mk)
 
 # Basic device information (device-verified)
 PRODUCT_NAME := omni_OP4E35
@@ -29,5 +29,5 @@ PRODUCT_PACKAGES += \
 #     $(LOCAL_PATH)/prebuilt/kernel:kernel
 
 # Dynamic partition & 64-bit support
-$(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
+#$(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
