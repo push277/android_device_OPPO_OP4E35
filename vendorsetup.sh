@@ -1,4 +1,5 @@
-# OP4E35 (PDVM00) vendorsetup.sh
-# OBSOLETE: add_lunch_combo is deprecated.
-# Use COMMON_LUNCH_CHOICES in AndroidProducts.mk instead.
-# No active code here - all lunch options are defined in AndroidProducts.mk
+# OP4E35 vendorsetup.sh (minimal valid content, no GA changes)
+# Legacy support for lunch choices (fix "Product not found" warning)
+add_lunch_combo omni_OP4E35-eng
+add_lunch_combo omni_OP4E35-user
+add_lunch_combo omni_OP4E35-userdebug

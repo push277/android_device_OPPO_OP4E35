@@ -1,7 +1,5 @@
 # OP4E35 (PDVM00) omni_OP4E35.mk
 # Product build property overrides
-
-# Inherit core configuration from device.mk
 $(call inherit-product, device/OPPO/OP4E35/device.mk)
 
 # Override build properties (match device fingerprint)
