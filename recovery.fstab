@@ -1,3 +1,5 @@
+# OP4E35 (PDVM00) Recovery Fstab (OPPO native format + TWRP encryption support)
+# Format: <label> <fs_type> <device> <flags>
 /system              ext4     system                                         flags=display=system;logical
 /vendor              ext4     vendor                                         flags=display=vendor;logical
 /product             ext4     product                                        flags=display=product;logical
@@ -6,7 +8,7 @@
 /cache               ext4     /dev/block/by-name/cache                       flags=display=cache
 /special_preload     ext4     /dev/block/by-name/preload                     flags=display=special_preload
 /metadata            ext4     /dev/block/by-name/metadata                    flags=display=metadata
-/data                f2fs     /dev/block/bootdevice/by-name/userdata         flags=display=data
+/data                f2fs     /dev/block/bootdevice/by-name/userdata         flags=display=data;encryptable=/dev/block/bootdevice/by-name/userdata
 /external_sd         vfat     /dev/block/mmcblk1p1                           flags=display=external_sd
 /usb_otg             vfat     /dev/block/sdg1                                flags=display=usb_otg
 /boot                emmc     /dev/block/bootdevice/by-name/boot             flags=display=boot

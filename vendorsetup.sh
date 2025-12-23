@@ -1,10 +1,4 @@
-#
-# Copyright (C) 2025 The Android Open Source Project
-# Copyright (C) 2025 SebaUbuntu's TWRP device tree generator
-#
-# SPDX-License-Identifier: Apache-2.0
-#
-
-add_lunch_combo omni_OP4E35-user
-add_lunch_combo omni_OP4E35-userdebug
-add_lunch_combo omni_OP4E35-eng
+# OP4E35 (PDVM00) vendorsetup.sh
+# OBSOLETE: add_lunch_combo is deprecated.
+# Use COMMON_LUNCH_CHOICES in AndroidProducts.mk instead.
+# No active code here - all lunch options are defined in AndroidProducts.mk
