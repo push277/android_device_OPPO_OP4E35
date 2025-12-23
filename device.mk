@@ -18,7 +18,6 @@ PRODUCT_PACKAGES += \
     crypto_utils
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BUILD_FINGERPRINT=OPPO/PDVM00/OP4E35:11/RKQ1.201217.002/1716954220938:user/release-keys \
     PRIVATE_BUILD_DESC="PDVM00-user 11 RKQ1.201217.002 1716954220938 release-keys"
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
