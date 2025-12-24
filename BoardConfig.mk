@@ -1,7 +1,7 @@
 # OP4E35 (PDVM00) BoardConfig.mk
 # All parameters from device terminal output (Root)
 # Platform: Qualcomm Bengal | Android 11 | arm64-v8a
-
+LOCAL_PATH := $(call my-dir)
 # ====================== CPU/Architecture (Device-Verified) ======================
 TARGET_DEVICE := OP4E35
 TARGET_BOARD_PLATFORM := bengal  # from getprop ro.board.platform
