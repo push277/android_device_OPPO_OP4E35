@@ -24,6 +24,7 @@ TARGET_2ND_CPU_VARIANT := generic
 # Prebuilt kernel path (commented by default to fix "kernel not found" error)
 # Uncomment only if prebuilt/kernel file exists in device tree directory
 TARGET_PREBUILT_KERNEL := device/OPPO/OP4E35/prebuilt/kernel
+BOARD_PREBUILT_DTBIMAGE := device/OPPO/OP4E35/prebuilt/dtb
 # Full kernel cmdline (from cat /proc/cmdline)
 BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200n8 androidboot.hardware=qcom androidboot.console=ttyMSM0 androidboot.memcg=1 lpm_levels.sleep_disabled=1 video=vfb:640x400,bpp=32,memsize=3072000 msm_rtb.filter=0x237 service_locator.enable=1 androidboot.usbcontroller=a600000.dwc3 swiotlb=2048 loop.max_part=7 cgroup.memory=nokmem,nosocket androidboot.selinux=permissive
 
@@ -45,12 +46,12 @@ BOARD_SUPER_PARTITION_DEVICE := /dev/block/sda6  # Verified super partition path
 # Partition size (twrpdtgen verified / Bengal platform default)
 BOARD_BOOTIMAGE_PARTITION_SIZE := 46829568  # 44.7MB
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 46829568
-BOARD_SUPER_PARTITION_SIZE := 8598323200    # 8199MB (dynamic partition)
+BOARD_SUPER_PARTITION_SIZE := 8617048064    # 8199MB (dynamic partition)
 
 # Dynamic partitions (getprop ro.boot.dynamic_partitions = true)
 BOARD_SUPER_PARTITION_GROUPS := OPPO_dynamic_partitions
-BOARD_OPPO_DYNAMIC_PARTITIONS_SIZE := 8598323200
-BOARD_OPPO_DYNAMIC_PARTITIONS_PARTITION_LIST := system vendor product system_ext
+BOARD_OPPO_DYNAMIC_PARTITIONS_SIZE := 8600000000
+BOARD_OPPO_DYNAMIC_PARTITIONS_PARTITION_LIST := system vendor product odm system_ext my_product my_engineering my_heytap my_stock my_region my_carrier my_preload my_company my_manifest
 BOARD_USES_METADATA_PARTITION := true  # Fix dynamic partition validation error
 
 # ====================== TWRP Configuration (Device-Verified) ======================
@@ -76,6 +77,12 @@ TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_SCREEN_BLANK_ON_BOOT := true
 TW_SUPPORT_INPUT_USB_KEYBOARD := true
 
+# ====================== AVB ======================
+BOARD_AVB_ENABLE := true
+BOARD_AVB_RECOVERY_KEY_PATH := external/avb/test/data/testkey_rsa2048.pem
+BOARD_AVB_RECOVERY_ALGORITHM := SHA256_RSA2048
+BOARD_AVB_RECOVERY_ROLLBACK_INDEX := 0
+BOARD_AVB_RECOVERY_ROLLBACK_INDEX_LOCATION := 1
 # ====================== QCOM Platform Configuration ======================
 BOARD_USES_QCOM_HARDWARE := true
 TW_EXCLUDE_DEFAULT_USB_INIT := true  # QCOM-specific USB config
