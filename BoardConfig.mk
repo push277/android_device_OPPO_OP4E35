@@ -26,7 +26,7 @@ TARGET_2ND_CPU_VARIANT := generic
 TARGET_PREBUILT_KERNEL := device/OPPO/OP4E35/prebuilt/kernel
 BOARD_PREBUILT_DTBIMAGE := device/OPPO/OP4E35/prebuilt/dtb
 # Full kernel cmdline (from cat /proc/cmdline)
-BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200n8 androidboot.hardware=qcom androidboot.console=ttyMSM0 androidboot.memcg=1 lpm_levels.sleep_disabled=1 video=vfb:640x400,bpp=32,memsize=3072000 msm_rtb.filter=0x237 service_locator.enable=1 androidboot.usbcontroller=a600000.dwc3 swiotlb=2048 loop.max_part=7 cgroup.memory=nokmem,nosocket androidboot.selinux=permissive
+BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200n8 earlycon=msm_geni_serial,0x4a90000 androidboot.hardware=OP4E35 androidboot.console=ttyMSM0 androidboot.memcg=1 androidboot.prjname=20021 androidboot.fstab_suffix=default androidboot.dtbo_idx=7 androidboot.dtb_idx=4 androidboot.bootdevice=4804000.ufshc androidboot.selinux=permissive
 
 # Kernel base/pagesize (Bengal platform default, blockdev --getbsz boot = 4096)
 BOARD_KERNEL_BASE := 0x80000000
