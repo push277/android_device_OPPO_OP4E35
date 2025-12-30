@@ -62,9 +62,9 @@ TW_SCREEN_WIDTH := 720
 TW_SCREEN_HEIGHT := 1600
 
 # Brightness (device-verified path & max value)
-TW_BRIGHTNESS_PATH := /sys/devices/platform/soc/5e00000.qcom,mdss_mdp/backlight/panel0-backlight/brightness
-TW_MAX_BRIGHTNESS := 4095  # Actual max brightness from device
-TW_DEFAULT_BRIGHTNESS := 2048  # Middle value (4095/2)
+TW_BRIGHTNESS_PATH := "/sys/devices/platform/soc/5e00000.qcom,mdss_mdp/backlight/panel0-backlight/brightness"
+TW_MAX_BRIGHTNESS := "4095"
+TW_DEFAULT_BRIGHTNESS := "2048"
 
 # Encryption (getprop ro.crypto.state=encrypted, ro.crypto.type=file)
 TW_INCLUDE_CRYPTO := true
