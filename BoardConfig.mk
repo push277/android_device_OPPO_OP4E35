@@ -24,6 +24,7 @@ TARGET_2ND_CPU_VARIANT := generic
 # Prebuilt kernel path (commented by default to fix "kernel not found" error)
 # Uncomment only if prebuilt/kernel file exists in device tree directory
 TARGET_PREBUILT_KERNEL := device/OPPO/OP4E35/prebuilt/kernel
+BOARD_PREBUILT_DTBOIMAGE := device/OPPO/OP4E35/prebuilt/dtbo
 BOARD_PREBUILT_DTBIMAGE := device/OPPO/OP4E35/prebuilt/dtb
 # Full kernel cmdline (from cat /proc/cmdline)
 BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200n8 earlycon=msm_geni_serial,0x4a90000 androidboot.hardware=OP4E35 androidboot.console=ttyMSM0 androidboot.memcg=1 androidboot.prjname=20021 androidboot.fstab_suffix=default androidboot.dtbo_idx=7 androidboot.dtb_idx=4 androidboot.bootdevice=4804000.ufshc androidboot.selinux=permissive
